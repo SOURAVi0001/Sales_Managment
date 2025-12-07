@@ -15,12 +15,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: "*",
   credentials: false
 }));
 
 app.use(express.json());
 
+console.log('--- SERVER STARTING ---');
 connectDB();
 
 app.use('/api/sales', salesRoutes);

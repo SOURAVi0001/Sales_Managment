@@ -36,7 +36,7 @@ export const getSalesData = async (req, res) => {
     });
 
     const stats = await getAggregatedStats(filters, search);
-
+    console.log('Aggregated Stats:', stats);
     res.json({
       success: true,
       data: {
@@ -54,7 +54,8 @@ export const getSalesData = async (req, res) => {
         }
       }
     });
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Error fetching sales data:', error);
     res.status(500).json({
       success: false,

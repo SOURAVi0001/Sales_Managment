@@ -27,6 +27,7 @@ export const useSalesStore = create((set, get) => ({
       sortBy: 'date-desc',
       loading: false,
       error: null,
+      lastFetchTime: null,
 
       setSearch: (search) => set({ search }),
 
@@ -48,6 +49,7 @@ export const useSalesStore = create((set, get) => ({
 
       fetchSales: async () => {
             set({ loading: true, error: null });
+            const startTime = performance.now();
             try {
                   const { search, filters, sortBy, pagination } = get();
                   const response = await fetchSalesData({
@@ -56,11 +58,15 @@ export const useSalesStore = create((set, get) => ({
                         sortBy,
                         page: pagination.currentPage
                   });
+                  const endTime = performance.now();
+                  const fetchTime = Math.round(endTime - startTime);
+
                   set({
                         sales: response.data.sales,
                         stats: response.data.stats,
                         pagination: response.data.pagination,
-                        loading: false
+                        loading: false,
+                        lastFetchTime: fetchTime
                   });
             } catch (error) {
                   set({ error: error.message, loading: false });

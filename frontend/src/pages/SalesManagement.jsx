@@ -20,6 +20,7 @@ const SalesManagement = () => {
     sortBy,
     loading,
     error,
+    lastFetchTime,
     setSearch,
     setSortBy,
     updateFilter,
@@ -83,6 +84,11 @@ const SalesManagement = () => {
         </div>
         <StatsCards stats={stats} />
         {error && <div className="error-message">Error: {error}</div>}
+        {lastFetchTime && (
+          <div className="fetch-time-info">
+            Loaded in {lastFetchTime}ms • Showing {sales.length} of {pagination.totalCount} results
+          </div>
+        )}
         <SalesTable sales={sales} loading={loading} />
         <Pagination
           currentPage={pagination.currentPage}
