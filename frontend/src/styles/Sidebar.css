@@ -1,0 +1,95 @@
+.sidebar {
+  width: 250px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #333333;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333333;
+}
+
+.sidebar-header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header-title > div:first-child {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar-header-subtitle {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 4px;
+}
+
+.sidebar-dropdown {
+  color: #888888;
+  cursor: pointer;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+.nav-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #cccccc;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #2a2a2a;
+}
+
+.nav-item.selected {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.nav-section {
+  margin-top: 10px;
+}
+
+.nav-section-header {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #cccccc;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-section-items {
+  padding-left: 20px;
+}
+
+.nav-radio {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cccccc;
+}
+
+.nav-radio input[type="radio"] {
+  cursor: pointer;
+}
+
+.nav-radio label {
+  cursor: pointer;
+  font-size: 14px;
+}

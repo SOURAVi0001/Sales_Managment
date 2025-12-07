@@ -1,0 +1,24 @@
+.sort-dropdown {
+  position: relative;
+}
+
+.sort-select {
+  padding: 8px 16px;
+  background-color: #1a1a1a;
+  border: 2px solid #ffd700;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  min-width: 220px;
+}
+
+.sort-select:hover {
+  background-color: #2a2a2a;
+}
+
+.sort-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
