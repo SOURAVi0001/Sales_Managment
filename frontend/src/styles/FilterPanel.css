@@ -1,22 +1,21 @@
 .filter-panel {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .filter-icon-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #1a1a1a;
-  border: 1px solid #333333;
-  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  color: #666;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
 }
 
 .filter-dropdown {
@@ -25,17 +24,27 @@
 
 .filter-btn {
   padding: 8px 16px;
-  background-color: #1a1a1a;
-  border: 1px solid #333333;
-  border-radius: 4px;
-  color: #ffffff;
+  background-color: #f5f5f5; /* Light background */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  color: #333;
   cursor: pointer;
-  font-size: 14px;
-  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Add an arrow to mimic screenshot dropdowns */
+.filter-btn::after {
+    content: "▼";
+    font-size: 8px;
+    color: #888;
 }
 
 .filter-btn:hover {
-  background-color: #2a2a2a;
+  background-color: #ebebeb;
 }
 
 .filter-menu {
@@ -43,47 +52,23 @@
   top: 100%;
   left: 0;
   margin-top: 4px;
-  background-color: #1a1a1a;
-  border: 1px solid #333333;
-  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   padding: 8px;
-  min-width: 150px;
+  min-width: 180px;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .filter-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 8px;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 14px;
+    color: #333;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-
 .filter-checkbox:hover {
-  background-color: #2a2a2a;
-}
-
-.filter-range {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px;
-}
-
-.filter-range input {
-  flex: 1;
-  padding: 6px;
-  background-color: #2a2a2a;
-  border: 1px solid #333333;
-  border-radius: 4px;
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.filter-range span {
-  color: #888888;
-  font-size: 14px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
 }

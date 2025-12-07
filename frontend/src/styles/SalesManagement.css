@@ -2,8 +2,8 @@
   display: flex;
   width: 100%;
   height: 100vh;
-  background-color: #f5f5f5;
-  color: #000000;
+  background-color: #ffffff; /* Changed to white */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .main-content {
@@ -11,32 +11,32 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  padding: 20px;
+  padding: 24px 32px;
   background-color: #ffffff;
 }
 
 .content-header {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .page-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 15px;
-  color: #000000;
+  margin-bottom: 20px;
+  color: #1a1a1a;
 }
 
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between; /* Spreads search/filter and sort */
+  gap: 16px;
   flex-wrap: wrap;
 }
 
-.error-message {
-  color: #ff4444;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: rgba(255, 68, 68, 0.1);
-  border-radius: 4px;
+/* Group filters together */
+.filter-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
